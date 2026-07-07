@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 14
+names: ['Boar', 'Buffalo', 'Cat', 'Chicken', 'Cow', 'Dog', 'Donkey', 'Goat', 'Horse', 'KomodoDragon', 'Lion', 'Sheep', 'Snake', 'Tiger']
+
+roboflow:
+  workspace: aisha1122
+  project: animal-detection-fyp-lkqss
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/aisha1122/animal-detection-fyp-lkqss/dataset/3

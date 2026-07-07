@@ -1,0 +1,23 @@
+# YOLOv8 dataset configuration
+# Update `path` according to your dataset location.
+
+path: ./data
+train: train/images
+val: valid/images
+test: test/images
+
+names:
+  0: Boar
+  1: Buffalo
+  2: Cat
+  3: Chicken
+  4: Cow
+  5: Dog
+  6: Donkey
+  7: Goat
+  8: Horse
+  9: KomodoDragon
+  10: Lion
+  11: Sheep
+  12: Snake
+  13: Tiger

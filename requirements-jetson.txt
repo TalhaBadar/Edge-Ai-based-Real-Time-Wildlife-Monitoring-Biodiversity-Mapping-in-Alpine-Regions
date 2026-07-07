@@ -1,0 +1,16 @@
+# Jetson Nano installation note:
+# Install PyTorch, TorchVision, TensorRT, CUDA, and OpenCV versions compatible with your JetPack version.
+# Then install the remaining packages below.
+
+ultralytics>=8.2.0
+numpy
+pandas
+matplotlib
+PyYAML
+Pillow
+tqdm
+firebase-admin
+requests
+pynmea2
+# Optional for GPIO alerts on Jetson:
+Jetson.GPIO

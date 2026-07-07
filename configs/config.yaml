@@ -1,0 +1,61 @@
+project:
+  name: Edge AI Wildlife Detection
+  description: YOLOv8n based wildlife detection with mobile app, edge device, and Firebase synchronization.
+
+paths:
+  dataset_yaml: data/dataset.yaml
+  models_dir: models
+  best_model: models/best.pt
+  tflite_model: models/best.tflite
+  outputs_dir: outputs
+  results_dir: results
+
+training:
+  base_model: yolov8n.pt
+  epochs: 100
+  batch: 16
+  image_size: 640
+  device: 0
+  patience: 20
+  workers: 4
+  cache: true
+  project: runs
+  run_name: WildlifeDetector
+
+inference:
+  confidence: 0.50
+  iou: 0.45
+  image_size: 640
+  save_annotated: true
+  show_window: false
+
+edge:
+  device_id: JETSON_NANO_01
+  device_type: NVIDIA Jetson Nano
+  source_name: AGX Camera
+  camera_source: 0
+  frame_width: 1280
+  frame_height: 720
+  display_window: false
+  detection_cooldown_seconds: 5
+  local_cache_db: edge_cache/detections.sqlite
+  local_image_dir: edge_cache/images
+  sync_interval_seconds: 30
+
+location:
+  mode: fixed      # fixed or serial
+  fixed_latitude: 34.1688
+  fixed_longitude: 73.2215
+  serial_port: /dev/ttyUSB0
+  baud_rate: 9600
+
+firebase:
+  enabled: false
+  service_account_json: firebase/serviceAccount.json
+  storage_bucket: your-project-id.appspot.com
+  firestore_collection: detections
+
+alerts:
+  enable_console: true
+  enable_gpio: false
+  gpio_pin: 18
