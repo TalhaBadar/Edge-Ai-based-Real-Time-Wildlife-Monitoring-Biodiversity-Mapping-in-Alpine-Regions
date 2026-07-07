@@ -1,13 +1,19 @@
 # Models Folder
 
-Place trained and exported models here:
+Place your trained model files here.
+
+Required after training:
 
 ```text
-models/
-├── best.pt        # YOLOv8n trained model
-├── best.tflite    # TensorFlow Lite export for mobile app testing
-├── best.onnx      # Optional ONNX export
-└── best.engine    # Optional TensorRT engine for Jetson
+models/best.pt
 ```
 
-This repository does not include your actual trained model weights. Copy your `best.pt` from YOLO training results into this folder.
+Optional exports:
+
+```text
+models/best.tflite
+models/best.onnx
+models/best.engine
+```
+
+These model files are not included in this ZIP because your instructor requested **model code**, not trained weights.

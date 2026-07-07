@@ -1,0 +1,14 @@
+Boar
+Buffalo
+Cat
+Chicken
+Cow
+Dog
+Donkey
+Goat
+Horse
+KomodoDragon
+Lion
+Sheep
+Snake
+Tiger

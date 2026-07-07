@@ -1,0 +1,30 @@
+model:
+  base_model: yolov8n.pt
+  trained_model: models/best.pt
+  tflite_model: models/best.tflite
+  onnx_model: models/best.onnx
+
+training:
+  epochs: 100
+  batch_size: 16
+  image_size: 640
+  device: cuda
+  patience: 20
+
+detection:
+  confidence_threshold: 0.55
+  iou_threshold: 0.45
+
+edge:
+  camera_id: 0
+  frame_width: 1280
+  frame_height: 720
+  device_id: JETSON_NANO_01
+  device_type: NVIDIA Jetson Nano
+  camera_type: AGX Camera
+
+paths:
+  dataset_yaml: data/dataset.yaml
+  results_dir: results
+  detections_dir: detections
+  cache_db: cache/detections.sqlite3

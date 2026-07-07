@@ -1,0 +1,34 @@
+description: Ultralytics best model trained on /home/spcai/yolo_fyp/dataset/data.yaml
+author: Ultralytics
+date: '2026-01-12T23:12:10.818517'
+version: 8.3.248
+license: AGPL-3.0 License (https://ultralytics.com/license)
+docs: https://docs.ultralytics.com
+stride: 32
+task: detect
+batch: 1
+imgsz:
+- 768
+- 768
+names:
+  0: Boar
+  1: Buffalo
+  2: Cat
+  3: Chicken
+  4: Cow
+  5: Dog
+  6: Donkey
+  7: Goat
+  8: Horse
+  9: KomodoDragon
+  10: Lion
+  11: Sheep
+  12: Snake
+  13: Tiger
+args:
+  batch: 1
+  fraction: 1.0
+  half: false
+  int8: false
+  nms: false
+channels: 3
